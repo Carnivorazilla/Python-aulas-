@@ -1,11 +1,19 @@
 import os
 os.system('cls')
 
-numero = int(input('Escreva um número inteiro e positivo'))
+
+notas  = [6,7,6.5,4.8,8]
+soma= 0
 cont = 0
-while cont in range(numero+1):
-    print(f'{numero}/{cont}')
-    cont= cont + 1
-    if cont >= 11:
-        print('Acabou os numeros :(')
+for n in notas:
+    soma+= n
     
+media = soma/len(notas)
+#print(f'A média é {media:.2f} ')
+
+
+for i in range(len(notas)):
+    if notas[i] > media:
+        cont+=1
+
+print(f'Notas acima da média: {cont}')
